@@ -9,8 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
- keymap {
-               compatible = "zmk,keymap";
+        keymap {
+                compatible = "zmk,keymap";
+
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
@@ -19,9 +20,9 @@
 //                    | GUI | LWR | CTRL |   | SPAC | RSE  | ALT |
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp TAB &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &lt 3 TAB &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET 
-       &kp LGUI &lt 2 SPACE &mt LCTRL RET    &mt mo 1 SPACE  &mo 2 &mt RALT DEL 
+       &kp LGUI &lt 2 SPACE &mt LCTRL RET    &lt 1 SPACE  &mo 2 &mt RALT DEL 
                         >;
                 };
                 lower_layer {
@@ -31,8 +32,8 @@
 // | LCAPS|  <  |  >  |  _  |  @  |  $  |   |  0  |  1  |  2  |  3  |  -  |  +   |
 //                    | GUI |     |CTRL |   | ENT |     | ALT |
                         bindings = <
-   &kp RA(GRAVE) &rgb_ug RGB_ON   &kp LS(N8)      &kp LS(N9)   &kp LS(N5)   &kp AT        &kp COMMA   &kp N7     &kp N8  &kp N9  &kp KP_DIVIDE     &kp BSPC
-   &kp CLCK      &rgb_ug RGB_OFF  &kp LS(COMMA)   &kp LS(DOT)  &kp LS(N6)   &kp MINUS 	  &kp DOT     &kp N4     &kp N5  &kp N6  &kp KP_MULTIPLY   &kp RPAR
+   &kp RA(GRAVE) &trans   &kp LS(N8)      &kp LS(N9)   &kp LS(N5)   &kp AT        &kp COMMA   &kp N7     &kp N8  &kp N9  &kp KP_DIVIDE     &kp BSPC
+   &kp CLCK      &trans  &kp LS(COMMA)   &kp LS(DOT)  &kp LS(N6)   &kp MINUS 	  &kp DOT     &kp N4     &kp N5  &kp N6  &kp KP_MULTIPLY   &kp RPAR
    &kp LSHFT     &kp NON_US_BSLH  &kp LS(NON_US_BSLH)   &kp LS(FSLH)  &kp RA(N2)   &kp DLLR      &kp N0     &kp N1  &kp N2  &kp N3  &trans   &kp RBKT
                           	       &trans         &trans       &trans         &trans      &kp COMMA  &mt RALT DEL 
                         >;
@@ -47,8 +48,8 @@
    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6          &kp RA(LBKT)  &kp RA(RBKT)   &kp RA(SQT)  &kp RA(BSLH)  &kp PSCRN   &kp BSPC
    &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kp F12         &kp PLUS      &kp LS(MINUS)  &kp GRAVE    &kp RA(N3)    &kp UP      &kp BSLH
    &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &kp EQUAL     &kp EXCL       &kp TILDE    &kp LEFT      &kp DOWN    &kp RIGHT
-                                          &trans    &trans 	   &kp RA(N2)      &trans       &trans        &kp RALT
-                          >;
-                };                      
+                                          &bootloader  &trans 	    &kp RA(N2)      &trans        &zed_em_kay        &kp RALT
+                        >;
+                };               
         };
 };
